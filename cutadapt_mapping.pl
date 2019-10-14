@@ -61,8 +61,8 @@ foreach(@Sample){
 
 foreach(@Sample){
     system(
-    	  "echo $_ >> mapping_report.txt
-    	   samtools flagstat $_.bam >> mapping_report.txt
+    	"echo $_ >> mapping_report.txt
+    	 samtools flagstat $_.bam >> mapping_report.txt
          echo 'unique mapping' >> mapping_report.txt
          samtools view $_.bam | grep NH:i:1 | wc -l >> mapping_report.txt"
     );
